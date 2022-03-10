@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "AmyDataFactory-Dev"
+		},
+		"DataLakeConnect_accountKey": {
+			"value": ""
+		},
+		"DevStorageAcct_connectionString": {
+			"value": ""
+		},
+		"GithubAmy_credential": {
+			"value": ""
+		},
+		"DataLakeConnect_properties_typeProperties_url": {
+			"value": "https://amystoragelakedev.dfs.core.windows.net"
+		},
+		"GithubAmy_properties_typeProperties_username": {
+			"value": "afelthe"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
