@@ -1,0 +1,19 @@
+{
+	"name": "LakeSourceBronzePDFs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLakeConnect",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "*",
+				"folderPath": "*",
+				"fileSystem": "bronzezone"
+			}
+		}
+	}
+}
