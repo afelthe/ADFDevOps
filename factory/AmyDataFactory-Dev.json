@@ -1,0 +1,9 @@
+{
+	"name": "AmyDataFactory-Dev",
+	"location": "southcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "598d6534-7f1b-4e73-b540-f72858f7427f",
+		"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+	}
+}
