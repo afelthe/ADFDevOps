@@ -159,8 +159,6 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "*",
-						"folderPath": "*",
 						"fileSystem": "bronzezone"
 					}
 				}
