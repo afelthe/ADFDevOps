@@ -1,7 +1,10 @@
 {
 	"name": "DataLakeConnect",
 	"properties": {
+		"annotations": [],
 		"type": "AzureBlobFS",
-		"annotations": []
+		"typeProperties": {
+			"url": "https://amystoragelakedev.dfs.core.windows.net"
+		}
 	}
 }
