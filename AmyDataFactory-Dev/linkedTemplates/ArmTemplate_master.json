@@ -7,17 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "AmyDataFactory-Dev"
 		},
-		"DataLakeConnect_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'DataLakeConnect'"
-		},
-		"DevStorageAcct_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'DevStorageAcct'"
-		},
 		"GithubAmy_credential": {
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'GithubAmy'"
+		},
+		"AmyKeyVaultDev_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://AmyKeyVault-Dev.vault.azure.net/"
 		},
 		"DataLakeConnect_properties_typeProperties_url": {
 			"type": "string",
@@ -54,14 +50,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"DataLakeConnect_accountKey": {
-						"value": "[parameters('DataLakeConnect_accountKey')]"
-					},
-					"DevStorageAcct_connectionString": {
-						"value": "[parameters('DevStorageAcct_connectionString')]"
-					},
 					"GithubAmy_credential": {
 						"value": "[parameters('GithubAmy_credential')]"
+					},
+					"AmyKeyVaultDev_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AmyKeyVaultDev_properties_typeProperties_baseUrl')]"
 					},
 					"DataLakeConnect_properties_typeProperties_url": {
 						"value": "[parameters('DataLakeConnect_properties_typeProperties_url')]"

@@ -5,14 +5,11 @@
 		"factoryName": {
 			"value": "AmyDataFactory-Dev"
 		},
-		"DataLakeConnect_accountKey": {
-			"value": ""
-		},
-		"DevStorageAcct_connectionString": {
-			"value": ""
-		},
 		"GithubAmy_credential": {
 			"value": ""
+		},
+		"AmyKeyVaultDev_properties_typeProperties_baseUrl": {
+			"value": "https://AmyKeyVault-Dev.vault.azure.net/"
 		},
 		"DataLakeConnect_properties_typeProperties_url": {
 			"value": "https://amystoragelakedev.dfs.core.windows.net"

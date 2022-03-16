@@ -7,17 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "AmyDataFactory-Dev"
 		},
-		"DataLakeConnect_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'DataLakeConnect'"
-		},
-		"DevStorageAcct_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'DevStorageAcct'"
-		},
 		"GithubAmy_credential": {
 			"type": "secureString",
 			"metadata": "Secure string for 'credential' of 'GithubAmy'"
+		},
+		"AmyKeyVaultDev_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://AmyKeyVault-Dev.vault.azure.net/"
 		},
 		"DataLakeConnect_properties_typeProperties_url": {
 			"type": "string",
@@ -72,14 +68,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "LakeSourceBronzePDFs",
+								"referenceName": "LakeSourceBronzePDFDev",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "LakeSinkSilverPDFs",
+								"referenceName": "LakeSinkSilverPDFDev",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -93,12 +89,12 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/LakeSourceBronzePDFs')]",
-				"[concat(variables('factoryId'), '/datasets/LakeSinkSilverPDFs')]"
+				"[concat(variables('factoryId'), '/datasets/LakeSourceBronzePDFDev')]",
+				"[concat(variables('factoryId'), '/datasets/LakeSinkSilverPDFDev')]"
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/LakeSinkSilverPDFs')]",
+			"name": "[concat(parameters('factoryName'), '/LakeSinkSilverPDFDev')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -120,7 +116,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/LakeSourceBronzePDFs')]",
+			"name": "[concat(parameters('factoryName'), '/LakeSourceBronzePDFDev')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -142,6 +138,19 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/AmyKeyVaultDev')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('AmyKeyVaultDev_properties_typeProperties_baseUrl')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/DataLakeConnect')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -149,24 +158,7 @@
 				"annotations": [],
 				"type": "AzureBlobFS",
 				"typeProperties": {
-					"url": "[parameters('DataLakeConnect_properties_typeProperties_url')]",
-					"accountKey": {
-						"type": "SecureString",
-						"value": "[parameters('DataLakeConnect_accountKey')]"
-					}
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/DevStorageAcct')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('DevStorageAcct_connectionString')]"
+					"url": "[parameters('DataLakeConnect_properties_typeProperties_url')]"
 				}
 			},
 			"dependsOn": []
