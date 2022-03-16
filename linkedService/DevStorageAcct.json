@@ -1,7 +1,0 @@
-{
-	"name": "DevStorageAcct",
-	"properties": {
-		"type": "AzureBlobFS",
-		"annotations": []
-	}
-}
