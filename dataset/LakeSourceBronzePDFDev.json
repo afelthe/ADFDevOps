@@ -1,5 +1,5 @@
 {
-	"name": "LakeSourceBronzePDFs",
+	"name": "LakeSourceBronzePDFDev",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "DataLakeConnect",

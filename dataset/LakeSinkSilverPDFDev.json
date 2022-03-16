@@ -1,5 +1,5 @@
 {
-	"name": "LakeSinkSilverPDFs",
+	"name": "LakeSinkSilverPDFDev",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "DataLakeConnect",
