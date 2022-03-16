@@ -2,17 +2,9 @@
 	"name": "AmyKeyVaultDev",
 	"properties": {
 		"annotations": [],
-		"type": "AzureBlobFS",
+		"type": "AzureKeyVault",
 		"typeProperties": {
-			"baseUrl": "https://AmyKeyVault-Dev.vault.azure.net/",
-			"url": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "key vault linked service name here",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "secret name here"
-			}
+			"baseUrl": "https://AmyKeyVault-Dev.vault.azure.net/"
 		}
 	}
 }
